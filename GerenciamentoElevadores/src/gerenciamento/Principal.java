@@ -28,7 +28,6 @@ public class Principal{
 		
 		for (int i = 0; i < elevadores; i++) {
 			andaresIniciais[i] = sc.nextInt();
-			System.out.println("Andar inicial " + andaresIniciais[i]);
 		}
 		
 		for (int i = 0; i < andares; i++) {
@@ -39,10 +38,6 @@ public class Principal{
 				requisicao.setAndarDestino(andarDestino);
 				predio.getAndares().get(i).fila.add(requisicao); 
 			}	
-		}
-		
-		for (Andar andar : predio.getAndares()) {
-			andar.imprimeRequisicoes();
 		}
 		
 		sc.close();
@@ -70,17 +65,22 @@ public class Principal{
 		
 		leEntrada();
 		validaEntrada();
-			
+		
+		nthreads = elevadores;
+		
 		// Reservando espaço para vetor de threads
 		Thread[] threads = new Thread[nthreads];
 	
+		
 		// Criando threads
 		for (int i=0; i<threads.length; i++){
-			threads[i] = new Elevador(i, andaresIniciais[i], capacidade);
+
+			threads[i] = new Elevador(i, andaresIniciais[i], capacidade, predio);
 		}
 	
 		// Iniciando threads
 		for (int i=0; i<threads.length; i++){
+			
 			threads[i].start();
 		}
 	

@@ -2,12 +2,17 @@ package gerenciamento;
 
 import java.util.UUID;
 
-public class Requisicao {
+public class Requisicao  {
 	private UUID id;
 	private int andarDestino;
 	
 	public Requisicao(){
 		this.id = UUID.randomUUID();
+	}
+	
+	public Requisicao(int i){
+		this.id = UUID.randomUUID();
+		this.andarDestino = i;
 	}
 
 	public int getAndarDestino() {
@@ -20,11 +25,13 @@ public class Requisicao {
 	
 	@Override
 	public String toString() {
-		return ("ID " + this.id + " Andar destino " + this.andarDestino);
+//		return ("ID " + this.id + " Andar destino " + this.andarDestino);
+		return ("Destino: "+ this.andarDestino);
 	}
 
 	
 	public void setAndarDestino(int andarDestino) {
 		this.andarDestino = andarDestino;
 	}
+
 }
