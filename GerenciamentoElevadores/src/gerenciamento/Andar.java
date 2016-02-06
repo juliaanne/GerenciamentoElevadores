@@ -9,7 +9,7 @@ public class Andar {
 	List<Requisicao> fila = new LinkedList<Requisicao>();
 	
 	public Andar(int numero) {
-		this.numero = numero;
+		this.setNumero(numero);
 	}
 			 
 	void imprimeRequisicoes(){
@@ -38,6 +38,14 @@ public class Andar {
 			requisicoes.add(fila.remove(0));
 		}
 		return requisicoes;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
 	}
 	
 }
