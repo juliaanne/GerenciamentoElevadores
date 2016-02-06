@@ -17,7 +17,6 @@ public class Principal{
 	public static void leEntrada() throws FileNotFoundException{
 		File entrada = new File(".//src/entrada.txt");		
 		
-		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(entrada); 
 		andares = sc.nextInt();
 		elevadores = sc.nextInt();

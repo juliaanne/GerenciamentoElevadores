@@ -1,7 +1,6 @@
 package gerenciamento;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -31,19 +30,20 @@ public class Elevador extends Thread {
 		Collections.sort(atendimentos,new RequisicaoComparator());
 		int menorDistancia;
 		
-		int primeiro = atendimentos.get(0).getAndarDestino();
-		int ultimo = atendimentos.get(atendimentos.size()-1).getAndarDestino();
+		Requisicao primeiro = atendimentos.get(0);
+		Requisicao ultimo = atendimentos.get(atendimentos.size()-1);
 		
-		int d1 = Math.abs(andarInicial - primeiro);
-		int d2 = Math.abs(andarInicial - ultimo);
-		
+		int d1 = Math.abs(andarInicial - primeiro.getAndarDestino());
+		int d2 = Math.abs(andarInicial - ultimo.getAndarDestino());		
 		menorDistancia = Math.min(d1, d2);
 		
-		if(menorDistancia == d1){
-			//TODO
+		// Se for mais perto da última requisição, começa atendendo a última e reverte o restante da lista.
+		if(menorDistancia == d2){
+			Collections.rotate(atendimentos, 1);
+			Collections.reverse(atendimentos.subList(1, atendimentos.size()));
 		}
 		
-		
+		System.out.println("Elevador: " + this.id + " Andar Inicial " + andarInicial +" Atendimentos " + atendimentos);
 	}
 	
 }
