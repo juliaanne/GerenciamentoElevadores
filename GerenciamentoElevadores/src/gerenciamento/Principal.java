@@ -15,6 +15,7 @@ public class Principal{
 	public static Predio predio;
 	
 	public static void leEntrada() throws FileNotFoundException{
+		// ToDo: Por linha de comando
 		File entrada = new File(".//src/entrada.txt");		
 		
 		Scanner sc = new Scanner(entrada); 
@@ -35,7 +36,8 @@ public class Principal{
 				Requisicao requisicao = new Requisicao();
 				int andarDestino = sc.nextInt();
 				requisicao.setAndarDestino(andarDestino);
-				predio.getAndares().get(i).fila.add(requisicao); 
+				predio.getAndares().get(i).getFila().add(requisicao); // Essa orientacao a obj ta meio zuada, nao? 
+																	  // A fila é private e podemos adc requisicao? 
 			}	
 		}
 		
@@ -43,6 +45,7 @@ public class Principal{
 	}
 	
 	public static void validaEntrada(){
+		// ToDo: Validar a entrada na moral e ver se não está rolando contradições dentro da própria entrada fornecida
 		if(andares < 5 || andares > 100 ){
 			System.out.println("Elevadores devem ser de 5 a 100");
 			System.exit(0);
