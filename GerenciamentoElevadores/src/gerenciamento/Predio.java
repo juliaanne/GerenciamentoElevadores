@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Predio {
-	// Andares é um atributo estático, visto que pertence a classe e é compartilhado por todos os objetos de prédio
-	// Embora só tenhamos um
+	// Andares é um atributo estático, visto que pertence a classe e é compartilhado por todos os objetos de prédio, embora tenhamos apenas um
 	private static List<Andar> andares = new ArrayList<>();
 
 	// Construtor de prédio criando todos os andares do prédio 
@@ -26,6 +25,31 @@ public class Predio {
 		return andares;
 	}
 	
+	// Verifica se há requisicao pendente
+	public boolean requisicaoPendente(){
+		boolean result = false;
+		
+		for (Andar andar : andares) {
+			if(andar.getTamanhoFila() != 0){
+				result = true;
+				break;
+			}
+		}
+		
+		return result;
+	}
 	
+	// Verifica em quais andares há resquicoes pendentes
+	public List<Integer> andaresPendentes(){
+		List<Integer> andaresPendentes = new ArrayList<>();
+		
+		for (Andar andar : andares) {
+			if(andar.getTamanhoFila() != 0){
+				andaresPendentes.add(andar.getNumero());
+			}
+		}
+		
+		return andaresPendentes;
+	}
 
 }

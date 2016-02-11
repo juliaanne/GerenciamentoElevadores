@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Andar {
 	private int numero;
-	List<Requisicao> fila = new LinkedList<Requisicao>();
+	private List<Requisicao> fila = new LinkedList<Requisicao>();
 	
 	// Contrutor do andar com seu respectivo número
 	public Andar(int numero) {
@@ -21,6 +21,10 @@ public class Andar {
 	public int getNumero() {
 		return numero;
 	}
+	
+	public synchronized int getTamanhoFila(){
+		return this.fila.size();
+	}
 
 	// Setters
 	public void setFila(List<Requisicao> fila) {
@@ -33,7 +37,7 @@ public class Andar {
 
 	
 	// Impressão para as requisições no andar
-	void imprimeRequisicoes(){
+	public void imprimeRequisicoes(){
 		for (int i = 0; i < fila.size(); i++) {
 			System.out.println("Requisicao " + fila.get(i));
 		}

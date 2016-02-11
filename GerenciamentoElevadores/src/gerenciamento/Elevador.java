@@ -25,21 +25,53 @@ public class Elevador extends Thread {
 		System.out.println("Elevador " + id + " iniciou no andar " + andarInicial);
 		
 		// Enquanto há requisições pendentes em algum lugar do edifício:
-		//      Desloca-se até este andar
-		//      Seleciona as requisições até sua capacidade
-		//      Calcula trajeto
-		//      Desloca-se parando nos andares destinos de suas requisições
-		
-		atendimentos = predio.getAndares().get(andarInicial).forneceRequisicoes(capacidade);
-		
-		atendimentos = calculaTrajeto();
-		
-		System.out.println("Elevador " + this.id + " no andar Inicial " + andarInicial +" atenderá para os seguintes destinos: " + atendimentos);
+		while(predio.requisicaoPendente()){
+			// Desloca-se até este andar, decidindo qual andar mais proximo
+			int maisProximo = calculaAndarProximo();
+
+			// Seleciona as requisições até sua capacidade
+			atendimentos = predio.getAndares().get(maisProximo).forneceRequisicoes(capacidade);
+
+			// Calcula trajeto
+			atendimentos = calculaTrajeto();
+			System.out.println("Elevador " + this.id + " no andar Inicial " + andarInicial +" atenderá para os seguintes destinos: " + atendimentos);
+			
+			// Desloca-se parando nos andares destinos de suas requisições
+			// Retorna o andar final após o trajeto
+			// ToDo percorreTrejeto
+			int andarFinal = percorreTrajeto(atendimentos);
+			
+			// Setar andar final para andar inicial.
+			this.andarInicial = andarFinal; 
+		}
 		
 	}
 	
+	private int calculaAndarProximo() {
+		int maisProximo = Integer.MAX_VALUE, distanciaMinima;
+		int andarAtual = this.andarInicial;
+		
+		// Se há requisição no proprio andar que ele está, atende
+		if( predio.getAndares().get(andarAtual).getTamanhoFila() != 0 ){
+			maisProximo = andarAtual;
+		} else {
+			// Se há requisição pendente em mais de um andar, o elevador deve priorizar escolher: o andar mais perto, com mais requisicoes, tanto faz
+			List<Integer> andaresPendentes = predio.andaresPendentes();
+			for (Integer andar : andaresPendentes) {
+				if(Math.abs(andar - andarAtual) < maisProximo){
+					distanciaMinima = andar;
+					// BUCETA DE LOGICA FDP :@ NAO ENTENDO O QUE EU TO FAZENDO PORQUE TO FAZENDO DE MANEIRA BURRA
+				}
+			}
+			
+		}
+
+		return maisProximo;
+	}
+
+
 	// Calcula o trajeto que o elevador fará com as requisições colhidas do andar
-	public List<Requisicao> calculaTrajeto(){
+	private List<Requisicao> calculaTrajeto(){
 		Collections.sort(atendimentos, new RequisicaoComparator());
 		int menorDistancia;
 		
