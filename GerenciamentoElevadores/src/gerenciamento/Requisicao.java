@@ -6,15 +6,12 @@ public class Requisicao  {
 	private UUID id;
 	private int andarDestino;
 	
+	// Construtor de Requisicao com uma id única
 	public Requisicao(){
 		this.id = UUID.randomUUID();
 	}
-	
-	public Requisicao(int i){
-		this.id = UUID.randomUUID();
-		this.andarDestino = i;
-	}
 
+	// Getters
 	public int getAndarDestino() {
 		return andarDestino;
 	}
@@ -23,13 +20,14 @@ public class Requisicao  {
 		return id;
 	}
 	
+	// Impressão do destino
 	@Override
 	public String toString() {
-//		return ("ID " + this.id + " Andar destino " + this.andarDestino);
+		//return ("ID da requisição " + this.id + " com andar destino " + this.andarDestino);
 		return ("Destino: "+ this.andarDestino);
 	}
 
-	
+	// Setters
 	public void setAndarDestino(int andarDestino) {
 		this.andarDestino = andarDestino;
 	}
