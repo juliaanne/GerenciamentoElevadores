@@ -51,9 +51,8 @@ public class Elevador extends Thread {
 
 
 	private List<Requisicao> requisicoesMaisProximas(){
-		int primeiraOpcao = Integer.MAX_VALUE, tamanhoPrimeira;
-		int segundaOpcao = Integer.MAX_VALUE, tamanhoSegunda;
-		List<Requisicao> atendimentosPrimeira;
+		int maisProximo = predio.getNumeroAndares(), maiorFila = 0;
+		List<Requisicao> atendimentosMaisProximos;
 		
 		try {
 			semaforo.acquire();
@@ -63,47 +62,33 @@ public class Elevador extends Thread {
 		}
 		
 		// Se ha requisicao no proprio andar que ele esta, atende
-		if( predio.getAndares().get(this.andarInicial).getTamanhoFila() != 0 ){
-			System.out.println("Elevador " + this.id + " pegou as pessoas do seu andar inicial " + this.andarInicial);
-			primeiraOpcao = this.andarInicial;
-		} else {
-			// Procura requisicoes no predio
-			List<Integer> andaresPendentes = predio.andaresPendentes();
-			System.out.println("Elevador " + this.id + " vai procurar a melhor opçao");
+//		if( predio.getAndares().get(this.andarInicial).getTamanhoFila() != 0 ){
+//			System.out.println("Elevador " + this.id + " pegou as pessoas do seu andar inicial " + this.andarInicial);
+//			maisProximo = this.andarInicial;
+//		} else {
+		
+		// Procura requisicoes no predio
+		List<Integer> andaresPendentes = predio.andaresPendentes();
+		System.out.println("Elevador " + this.id + " vai procurar a melhor opçao");
 			
-			for (Integer andar : andaresPendentes) {
-				System.out.println("Elevador " + this.id + " esta procurando andares pendentes");
-				// Se o andar atual é IGUAL a opcao que eu ja tenho, entao devo reservar pois pode ser igual
-				if(Math.abs(andar - this.andarInicial) == primeiraOpcao) segundaOpcao = andar;
-				
-				// Se o andar atual é menor do que a opcao que eu tenho, entao esta passa a ser a melhor opcao
-				if(Math.abs(andar - this.andarInicial) < primeiraOpcao) primeiraOpcao = andar;
-				
-			}
-			
-			System.out.println("Elevador " + this.id + " pode atender ao andar " + primeiraOpcao + " ou ao andar " + segundaOpcao);
-			
-			if(primeiraOpcao == segundaOpcao){
-				System.out.println("Elevador " + this.id + " está escolhendo qual tem mais pessoas na fila");
-				// Caso as distancias sejam as mesmas
-				tamanhoPrimeira = predio.getAndares().get(primeiraOpcao).getTamanhoFila();
-				tamanhoSegunda = predio.getAndares().get(segundaOpcao).getTamanhoFila();
-				// Escolho a com mais mais requisicoes
-				if(tamanhoSegunda > tamanhoPrimeira)
-					primeiraOpcao = segundaOpcao;
+		for (Integer andar : andaresPendentes) {
+			System.out.println("Elevador " + this.id + " esta procurando andares pendentes");
+			if (Math.abs(andar - this.andarInicial) <= maisProximo && predio.getAndares().get(andar).getTamanhoFila() > maiorFila){ 
+				maisProximo = andar;
+				maiorFila = predio.getAndares().get(andar).getTamanhoFila();
 			}
 		}
+			
+		System.out.println("Elevador " + this.id + " atendera ao andar " + maisProximo);
 		
 		// Remove as requisicoes da fila
-		atendimentosPrimeira = predio.getAndares().get(primeiraOpcao).forneceRequisicoes(capacidade);
-		
-		System.out.println("Elevador " + this.id + " escolheu atender ao andar " + primeiraOpcao);
+		atendimentosMaisProximos = predio.getAndares().get(maisProximo).forneceRequisicoes(capacidade);
 		
 		semaforo.release();
 		
 		//System.out.println(atendimentosPrimeira);
 		
-		return atendimentosPrimeira;
+		return atendimentosMaisProximos;
 	}
 
 

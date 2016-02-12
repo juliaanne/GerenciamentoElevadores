@@ -25,6 +25,10 @@ public class Predio {
 		return andares;
 	}
 	
+	public int getNumeroAndares(){
+		return andares.size();
+	}
+	
 	// Verifica se ha requisicao pendente
 	public synchronized boolean requisicaoPendente(){
 		boolean result = false;
