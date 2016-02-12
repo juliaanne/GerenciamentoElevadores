@@ -11,24 +11,8 @@ public class Andar {
 	// Contrutor do andar com seu respectivo número
 	public Andar(int numero) {
 		this.setNumero(numero);
-
-	}
-			 
-	public int getNumero() {
-		return numero;
-	}
-
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
-	void imprimeRequisicoes(){
-		for (int i = 0; i < fila.size(); i++) {
-			System.out.println("Requisicao " + fila.get(i));
-		}
-
-	}
-
+	}		 
+	
 	// Getters
 	public List<Requisicao> getFila() {
 		return fila;
@@ -37,14 +21,29 @@ public class Andar {
 	public synchronized int getTamanhoFila(){
 		return this.fila.size();
 	}
+	
+	public int getNumero() {
+		return numero;
+	}
 
 	// Setters
 	public void setFila(List<Requisicao> fila) {
 		this.fila = fila;
 	}
 
-
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
 	
+	
+	// Imprime as requisicoes
+	void imprimeRequisicoes(){
+		for (int i = 0; i < fila.size(); i++) {
+			System.out.println("Requisicao " + fila.get(i));
+		}
+
+	}
+
 
 	// Fornece as requisições do Andar para o Elevador.
 	public synchronized List<Requisicao> forneceRequisicoes(int nRequisicoes){

@@ -15,7 +15,7 @@ public class Principal{
 	public static Predio predio;
 	
 	public static void leEntrada() throws FileNotFoundException{
-		// ToDo: Por linha de comando
+		// TODO: Por linha de comando
 		File entrada = new File(".//src/entrada.txt");		
 		
 		Scanner sc = new Scanner(entrada); 
@@ -45,7 +45,7 @@ public class Principal{
 	}
 	
 	public static void validaEntrada(){
-		// ToDo: Validar a entrada na moral e ver se não está rolando contradições dentro da própria entrada fornecida
+		// TODO: Validar a entrada na moral e ver se não está rolando contradições dentro da própria entrada fornecida
 		if(andares < 5 || andares > 100 ){
 			System.out.println("Elevadores devem ser de 5 a 100");
 			System.exit(0);
@@ -63,7 +63,7 @@ public class Principal{
 	}
 	
 	public static void main (String[] args) throws FileNotFoundException {
-		System.out.println("O programa iniciou");
+		//System.out.println("O programa iniciou");
 		
 		leEntrada();
 		validaEntrada();
@@ -96,7 +96,7 @@ public class Principal{
 			}
 		}
 	
-		System.out.println("O programa terminou");
+		//System.out.println("O programa terminou");
 		
 		
 	}

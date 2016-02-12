@@ -3,12 +3,14 @@ package gerenciamento;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.Semaphore;
 
 public class Elevador extends Thread {
 	public int id;
 	private int andarInicial;
 	private static int capacidade;
 	private static Predio predio;
+	private static Semaphore semaforo = new Semaphore(1);
 	private List<Requisicao> atendimentos = new ArrayList<Requisicao>();
 	
 	// Contrutor de elevador com o seu id, andar inicial, capacidade e Predio
@@ -20,32 +22,24 @@ public class Elevador extends Thread {
 	}
 
 	
-	// Método chamado quando as threads startam
+	// Metodo chamado quando as threads startam
 	public void run(){
-		System.out.println("Elevador " + id + " iniciou no andar " + andarInicial);
+		//System.out.println("Elevador " + id + " iniciou no andar " + andarInicial);
 		
-		// Enquanto há requisições pendentes em algum lugar do edifício:
-		
-		//TODO Esse método aqui tem  um problema, ele tem que ser syncronized
+		// Enquanto ha requisicoes pendentes em algum lugar do edificio:
 		while(predio.requisicaoPendente()){
+			// Seleciona as requisicoees ate sua capacidade do andar mais prÃ³ximo
+			atendimentos =  requisicoesMaisProximas();
 			
-			// Desloca-se até este andar, decidindo qual andar mais proximo
-			int maisProximo = calculaAndarProximo();
-
-			// Seleciona as requisições até sua capacidade
-			atendimentos = predio.getAndares().get(maisProximo).forneceRequisicoes(capacidade);
-
 			// Calcula trajeto
 			atendimentos = calculaTrajeto();
-			System.out.println("Elevador " + this.id + " no andar Inicial " + andarInicial +" atenderá para os seguintes destinos: " + atendimentos);
+			System.out.println("Elevador " + this.id + " no andar Inicial " + andarInicial +" atendera para os seguintes destinos: " + atendimentos);
 			
-			// Desloca-se parando nos andares destinos de suas requisições
-			// Retorna o andar final após o trajeto
-			// ToDo percorreTrejeto
-			int andarFinal = percorreTrajeto(atendimentos);
-			
-			// Setar andar final para andar inicial.
-			this.andarInicial = andarFinal; 
+			// Desloca-se parando nos andares destinos de suas requisicoes
+			// Retorna o andar final apos o trajeto
+			// TODO percorreTrejeto
+			this.andarInicial = percorreTrajeto(atendimentos);
+			break;
 		}
 		
 	}
@@ -56,29 +50,64 @@ public class Elevador extends Thread {
 	}
 
 
-	private int calculaAndarProximo() {
-		int maisProximo = Integer.MAX_VALUE, distanciaMinima;
-		int andarAtual = this.andarInicial;
+	private List<Requisicao> requisicoesMaisProximas(){
+		int primeiraOpcao = Integer.MAX_VALUE, tamanhoPrimeira;
+		int segundaOpcao = Integer.MAX_VALUE, tamanhoSegunda;
+		List<Requisicao> atendimentosPrimeira;
 		
-		// Se há requisição no proprio andar que ele está, atende
-		if( predio.getAndares().get(andarAtual).getTamanhoFila() != 0 ){
-			maisProximo = andarAtual;
+		try {
+			semaforo.acquire();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		// Se ha requisicao no proprio andar que ele esta, atende
+		if( predio.getAndares().get(this.andarInicial).getTamanhoFila() != 0 ){
+			System.out.println("Elevador " + this.id + " pegou as pessoas do seu andar inicial " + this.andarInicial);
+			primeiraOpcao = this.andarInicial;
 		} else {
-			// Se há requisição pendente em mais de um andar, o elevador deve priorizar escolher: o andar mais perto, com mais requisicoes, tanto faz
+			// Procura requisicoes no predio
 			List<Integer> andaresPendentes = predio.andaresPendentes();
+			System.out.println("Elevador " + this.id + " vai procurar a melhor opÃ§ao");
+			
 			for (Integer andar : andaresPendentes) {
-				if(Math.abs(andar - andarAtual) < maisProximo){
-					distanciaMinima = andar;
-				}
+				System.out.println("Elevador " + this.id + " esta procurando andares pendentes");
+				// Se o andar atual Ã© IGUAL a opcao que eu ja tenho, entao devo reservar pois pode ser igual
+				if(Math.abs(andar - this.andarInicial) == primeiraOpcao) segundaOpcao = andar;
+				
+				// Se o andar atual Ã© menor do que a opcao que eu tenho, entao esta passa a ser a melhor opcao
+				if(Math.abs(andar - this.andarInicial) < primeiraOpcao) primeiraOpcao = andar;
+				
 			}
 			
+			System.out.println("Elevador " + this.id + " pode atender ao andar " + primeiraOpcao + " ou ao andar " + segundaOpcao);
+			
+			if(primeiraOpcao == segundaOpcao){
+				System.out.println("Elevador " + this.id + " estÃ¡ escolhendo qual tem mais pessoas na fila");
+				// Caso as distancias sejam as mesmas
+				tamanhoPrimeira = predio.getAndares().get(primeiraOpcao).getTamanhoFila();
+				tamanhoSegunda = predio.getAndares().get(segundaOpcao).getTamanhoFila();
+				// Escolho a com mais mais requisicoes
+				if(tamanhoSegunda > tamanhoPrimeira)
+					primeiraOpcao = segundaOpcao;
+			}
 		}
-
-		return maisProximo;
+		
+		// Remove as requisicoes da fila
+		atendimentosPrimeira = predio.getAndares().get(primeiraOpcao).forneceRequisicoes(capacidade);
+		
+		System.out.println("Elevador " + this.id + " escolheu atender ao andar " + primeiraOpcao);
+		
+		semaforo.release();
+		
+		//System.out.println(atendimentosPrimeira);
+		
+		return atendimentosPrimeira;
 	}
 
 
-	// Calcula o trajeto que o elevador fará com as requisições colhidas do andar
+	// Calcula o trajeto que o elevador fara com as requisicoes colhidas do andar
 	private List<Requisicao> calculaTrajeto(){
 		Collections.sort(atendimentos, new RequisicaoComparator());
 		int menorDistancia;

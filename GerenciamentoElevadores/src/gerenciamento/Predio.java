@@ -25,7 +25,7 @@ public class Predio {
 		return andares;
 	}
 	
-	// Verifica se há requisicao pendente
+	// Verifica se ha requisicao pendente
 	public synchronized boolean requisicaoPendente(){
 		boolean result = false;
 		
@@ -39,7 +39,7 @@ public class Predio {
 		return result;
 	}
 	
-	// Verifica em quais andares há resquicoes pendentes
+	// Verifica em quais andares ha resquicoes pendentes
 	public List<Integer> andaresPendentes(){
 		List<Integer> andaresPendentes = new ArrayList<>();
 		
