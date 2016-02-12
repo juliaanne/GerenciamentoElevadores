@@ -56,6 +56,26 @@ public class Elevador extends Thread {
 	}
 
 
+	private int calculaAndarProximo() {
+		int maisProximo = Integer.MAX_VALUE, distanciaMinima;
+		int andarAtual = this.andarInicial;
+		
+		// Se há requisição no proprio andar que ele está, atende
+		if( predio.getAndares().get(andarAtual).getTamanhoFila() != 0 ){
+			maisProximo = andarAtual;
+		} else {
+			// Se há requisição pendente em mais de um andar, o elevador deve priorizar escolher: o andar mais perto, com mais requisicoes, tanto faz
+			List<Integer> andaresPendentes = predio.andaresPendentes();
+			for (Integer andar : andaresPendentes) {
+				if(Math.abs(andar - andarAtual) < maisProximo){
+					distanciaMinima = andar;
+				}
+			}
+			
+		}
+
+		return maisProximo;
+	}
 
 
 	// Calcula o trajeto que o elevador fará com as requisições colhidas do andar
