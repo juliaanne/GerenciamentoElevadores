@@ -35,18 +35,25 @@ public class Elevador extends Thread {
 			atendimentos = calculaTrajeto();
 			System.out.println("Elevador " + this.id + " no andar Inicial " + andarInicial +" atendera para os seguintes destinos: " + atendimentos);
 			
-			// Desloca-se parando nos andares destinos de suas requisicoes
-			// Retorna o andar final apos o trajeto
-			// TODO percorreTrejeto
+			// Desloca-se parando nos andares destinos de suas requisicoes e retorna o andar final apos o trajeto
 			this.andarInicial = percorreTrajeto(atendimentos);
+			
 			break;
 		}
 		
 	}
 	
-	private int percorreTrajeto(List<Requisicao> atendimentos2) {
-		// TODO Auto-generated method stub
-		return 0;
+	private int percorreTrajeto(List<Requisicao> atendimentosAtuais) {
+		int andarFinal = predio.getNumeroAndares();
+		
+		for (Requisicao requisicao : atendimentosAtuais) {
+			System.out.println("Elevador " + this.id + " parou no andar " + requisicao.getAndarDestino() + " para deixar um passageiro.");
+			andarFinal = requisicao.getAndarDestino();
+		}
+		
+		atendimentos.clear();
+		
+		return andarFinal;
 	}
 
 
@@ -63,22 +70,17 @@ public class Elevador extends Thread {
 		
 		// Procura requisicoes no predio
 		List<Integer> andaresPendentes = predio.andaresPendentes();
-		System.out.println("SEURA MEU DEBUGGG");
-		System.out.println(andaresPendentes);
-		System.out.println(predio.getNumeroAndares());
-		System.out.println("ACABOU DEBUG :(");
 		
 		System.out.println("Elevador " + this.id + " vai procurar a melhor opçao");
 			
 		for (Integer andar : andaresPendentes) {
-			System.out.println("Elevador " + this.id + " esta procurando andares pendentes. Verificando andar " + andar);
 			if (Math.abs(andar - this.andarInicial) <= maisProximo && predio.getAndares().get(andar).getTamanhoFila() > maiorFila){ 
 				maisProximo = andar;
 				maiorFila = predio.getAndares().get(andar).getTamanhoFila();
 			}
 		}
 			
-		System.out.println("Elevador " + this.id + " atendera ao andar " + maisProximo);
+		System.out.println("Elevador " + this.id + " escolheu atender ao andar " + maisProximo);
 		
 		// Remove as requisicoes da fila
 		atendimentosMaisProximos = predio.getAndares().get(maisProximo).forneceRequisicoes(capacidade);
