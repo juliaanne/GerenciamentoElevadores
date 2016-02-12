@@ -61,18 +61,14 @@ public class Elevador extends Thread {
 			e.printStackTrace();
 		}
 		
-		// Se ha requisicao no proprio andar que ele esta, atende
-//		if( predio.getAndares().get(this.andarInicial).getTamanhoFila() != 0 ){
-//			System.out.println("Elevador " + this.id + " pegou as pessoas do seu andar inicial " + this.andarInicial);
-//			maisProximo = this.andarInicial;
-//		} else {
-		
 		// Procura requisicoes no predio
 		List<Integer> andaresPendentes = predio.andaresPendentes();
+		System.out.println(andaresPendentes);
+		System.out.println(predio.getNumeroAndares());
 		System.out.println("Elevador " + this.id + " vai procurar a melhor opçao");
 			
 		for (Integer andar : andaresPendentes) {
-			System.out.println("Elevador " + this.id + " esta procurando andares pendentes");
+			System.out.println("Elevador " + this.id + " esta procurando andares pendentes. Verificando andar " + andar);
 			if (Math.abs(andar - this.andarInicial) <= maisProximo && predio.getAndares().get(andar).getTamanhoFila() > maiorFila){ 
 				maisProximo = andar;
 				maiorFila = predio.getAndares().get(andar).getTamanhoFila();
