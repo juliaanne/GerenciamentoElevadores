@@ -25,7 +25,10 @@ public class Elevador extends Thread {
 		System.out.println("Elevador " + id + " iniciou no andar " + andarInicial);
 		
 		// Enquanto há requisições pendentes em algum lugar do edifício:
+		
+		//TODO Esse método aqui tem  um problema, ele tem que ser syncronized
 		while(predio.requisicaoPendente()){
+			
 			// Desloca-se até este andar, decidindo qual andar mais proximo
 			int maisProximo = calculaAndarProximo();
 
@@ -53,27 +56,6 @@ public class Elevador extends Thread {
 	}
 
 
-	private int calculaAndarProximo() {
-		int maisProximo = Integer.MAX_VALUE, distanciaMinima;
-		int andarAtual = this.andarInicial;
-		
-		// Se há requisição no proprio andar que ele está, atende
-		if( predio.getAndares().get(andarAtual).getTamanhoFila() != 0 ){
-			maisProximo = andarAtual;
-		} else {
-			// Se há requisição pendente em mais de um andar, o elevador deve priorizar escolher: o andar mais perto, com mais requisicoes, tanto faz
-			List<Integer> andaresPendentes = predio.andaresPendentes();
-			for (Integer andar : andaresPendentes) {
-				if(Math.abs(andar - andarAtual) < maisProximo){
-					distanciaMinima = andar;
-					// BUCETA DE LOGICA FDP :@ NAO ENTENDO O QUE EU TO FAZENDO PORQUE TO FAZENDO DE MANEIRA BURRA
-				}
-			}
-			
-		}
-
-		return maisProximo;
-	}
 
 
 	// Calcula o trajeto que o elevador fará com as requisições colhidas do andar

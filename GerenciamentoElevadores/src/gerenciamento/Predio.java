@@ -26,7 +26,7 @@ public class Predio {
 	}
 	
 	// Verifica se há requisicao pendente
-	public boolean requisicaoPendente(){
+	public synchronized boolean requisicaoPendente(){
 		boolean result = false;
 		
 		for (Andar andar : andares) {
