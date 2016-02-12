@@ -32,13 +32,15 @@ public class Principal{
 		
 		for (int i = 0; i < andares; i++) {
 			int pessoasNoAndar = sc.nextInt();
+			System.out.println("Andar com " + pessoasNoAndar);
 			for (int j = 0; j < pessoasNoAndar; j++) {
 				Requisicao requisicao = new Requisicao();
 				int andarDestino = sc.nextInt();
+				System.out.println("Com andares destino: " + andarDestino);
 				requisicao.setAndarDestino(andarDestino);
 				predio.getAndares().get(i).getFila().add(requisicao); // Essa orientacao a obj ta meio zuada, nao? 
-																	  // A fila é private e podemos adc requisicao? 
-			}	
+																	  // A fila é private e podemos adc requisicao?
+			}
 		}
 		
 		sc.close();

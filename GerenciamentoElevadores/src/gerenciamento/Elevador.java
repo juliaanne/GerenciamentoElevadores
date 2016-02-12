@@ -63,8 +63,11 @@ public class Elevador extends Thread {
 		
 		// Procura requisicoes no predio
 		List<Integer> andaresPendentes = predio.andaresPendentes();
+		System.out.println("SEURA MEU DEBUGGG");
 		System.out.println(andaresPendentes);
 		System.out.println(predio.getNumeroAndares());
+		System.out.println("ACABOU DEBUG :(");
+		
 		System.out.println("Elevador " + this.id + " vai procurar a melhor opçao");
 			
 		for (Integer andar : andaresPendentes) {
