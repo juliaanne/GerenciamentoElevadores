@@ -14,11 +14,15 @@ public class Principal{
 	
 	public static Predio predio;
 	
-	public static void leEntrada() throws FileNotFoundException{
+	public static void leEntrada(String[] args) throws FileNotFoundException{
 		// TODO: Por linha de comando
-		File entrada = new File(".//src/entrada.txt");		
-		
-		Scanner sc = new Scanner(entrada); 
+		Scanner sc;
+	    if (args!=null && args.length>0 && args[0].equals("-d")){
+	        sc = new Scanner(new File(args[1]));
+	    } else {
+	        sc = new Scanner(System.in);
+	    }
+		 
 		andares = sc.nextInt();
 		elevadores = sc.nextInt();
 		capacidade = sc.nextInt();
@@ -66,7 +70,9 @@ public class Principal{
 	public static void main (String[] args) throws FileNotFoundException {
 		//System.out.println("O programa iniciou");
 		
-		leEntrada();
+		System.out.println(args[1]);
+		
+		leEntrada(args);
 		validaEntrada();
 		
 		nthreads = elevadores;
