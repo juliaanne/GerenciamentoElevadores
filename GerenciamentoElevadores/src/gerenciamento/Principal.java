@@ -2,15 +2,16 @@ package gerenciamento;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Principal{
-	
 	static int nthreads;
 	public static int andares;
 	public static int elevadores;
 	public static int capacidade;
-	public static Integer andaresIniciais[];
+	private static List<Integer> andaresAtuais = new ArrayList<>();
 	
 	public static Predio predio;
 	
@@ -25,35 +26,96 @@ public class Principal{
 	    }
 		
 	    // Colhendo andares, elevadores e capacidade, respectivamente
-		andares = sc.nextInt();
-		elevadores = sc.nextInt();
-		capacidade = sc.nextInt();
+	    String aec = sc.nextLine();
+	    validaAEC(aec);
+	    
+		// Instanciando andares iniciais
+		String andaresIniciais = sc.nextLine();
+		validaAndaresIniciais(andaresIniciais);
 		
 		// Instanciando predio
 		predio = new Predio(andares);
 		
-		// Instanciando andares iniciais
-		andaresIniciais = new Integer[elevadores];
-		for (int i = 0; i < elevadores; i++) {
-			andaresIniciais[i] = sc.nextInt();
+		int andar = 0;
+		while(sc.hasNextLine()){
+			String requisicoes = sc.nextLine();
+			validaRequisicoes(requisicoes, andar);
+			andar++;
+			validaAndares(andar);
 		}
 		
-		//
-		for (int i = 0; i < andares; i++) {
-			int pessoasNoAndar = sc.nextInt();
-			for (int j = 0; j < pessoasNoAndar; j++) {
-				Requisicao requisicao = new Requisicao();
-				int andarDestino = sc.nextInt();
-				requisicao.setAndarDestino(andarDestino);
-				predio.getAndares().get(i).getFila().add(requisicao);
-			}
-		}
+		validaQuantidadeAndares(andar);
 		
 		sc.close();
 	}
 	
-	public static void validaEntrada(){
-		// TODO: Validar a entrada na moral e ver se não está rolando contradições dentro da própria entrada fornecida
+	private static void validaAndares(int qtdeAndares) {
+		if(qtdeAndares >= andares){
+			System.out.println("Na entrada, não deve existir requisicoes sobrando");
+			System.exit(0);
+		}	
+	}
+
+	private static void validaQuantidadeAndares(int qtdeAndares) {
+		if(qtdeAndares != andares){
+			System.out.println("Na entrada, todos os andares necessitam possuir requisicoes.");
+			System.exit(0);
+		}
+	}
+
+	private static void validaRequisicoes(String requisicoes, int andarAtual) {
+		String[] requisicoesSplited = requisicoes.split(" ");
+		
+		int quantidadeRequisicoes = Integer.parseInt(requisicoesSplited[0]);
+		
+		if(requisicoesSplited.length != quantidadeRequisicoes+1){
+			System.out.println("Na entrada, use #pessoasNaFila e os respectivos destinos de CADA pessoa na fila");
+			System.exit(0);
+		}
+		
+		for(int i = 1; i < quantidadeRequisicoes; i++){
+			int andarDestino = Integer.parseInt(requisicoesSplited[i]);
+			Requisicao requisicao = new Requisicao();
+			requisicao.setAndarDestino(andarDestino);
+			predio.getAndares().get(andarAtual).getFila().add(requisicao);
+		}
+		
+	}
+
+	private static void validaAndaresIniciais(String andaresIniciais) {
+		String[] andaresSplited = andaresIniciais.split(" ");
+		
+		if(andaresSplited.length != elevadores){
+			System.out.println("Na entrada, defina andares iniciais para CADA elevador");
+			System.exit(0);
+		}
+		
+		for (int i=0; i < elevadores; i++) {
+			int andarInicialAtual = Integer.parseInt(andaresSplited[i]); 
+			
+			if(andarInicialAtual >= andares){
+				System.out.println("Na entrada, os andares iniciais devem existir no predio");
+				System.exit(0);
+			}
+			
+			andaresAtuais.add(andarInicialAtual);
+			
+		}
+		
+	}
+
+	public static void validaAEC(String aec){
+		String[] aecSplited = aec.split(" ");
+		
+		if(aecSplited.length != 3){
+			System.out.println("Na entrada, use #andares #elevadores #capacidade");
+			System.exit(0);
+		}
+		
+		andares = Integer.parseInt(aecSplited[0]);
+		elevadores = Integer.parseInt(aecSplited[1]);
+		capacidade = Integer.parseInt(aecSplited[2]);
+		
 		if(andares < 5 || andares > 100 ){
 			System.out.println("Elevadores devem ser de 5 a 100");
 			System.exit(0);
@@ -74,7 +136,6 @@ public class Principal{
 		System.out.println("O SGE iniciou...");
 		
 		leEntrada(args);
-		validaEntrada();
 		
 		nthreads = elevadores;
 		
@@ -83,7 +144,7 @@ public class Principal{
 		
 		// Criando threads
 		for (int i=0; i<threads.length; i++){
-			threads[i] = new Elevador(i, andaresIniciais[i], capacidade, predio);
+			threads[i] = new Elevador(i, andaresAtuais.get(i), capacidade, predio);
 		}
 	
 		// Iniciando threads
