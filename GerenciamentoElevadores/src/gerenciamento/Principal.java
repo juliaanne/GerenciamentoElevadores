@@ -15,33 +15,37 @@ public class Principal{
 	public static Predio predio;
 	
 	public static void leEntrada(String[] args) throws FileNotFoundException{
-		// TODO: Por linha de comando
 		Scanner sc;
+		
+		// Lendo entradas tanto pelo eclipse quanto pela linha de comando
 	    if (args!=null && args.length>0 && args[0].equals("-d")){
 	        sc = new Scanner(new File(args[1]));
 	    } else {
 	        sc = new Scanner(System.in);
 	    }
-		 
+		
+	    // Colhendo andares, elevadores e capacidade, respectivamente
 		andares = sc.nextInt();
 		elevadores = sc.nextInt();
 		capacidade = sc.nextInt();
 		
+		// Instanciando predio
 		predio = new Predio(andares);
-		andaresIniciais = new Integer[elevadores];
 		
+		// Instanciando andares iniciais
+		andaresIniciais = new Integer[elevadores];
 		for (int i = 0; i < elevadores; i++) {
 			andaresIniciais[i] = sc.nextInt();
 		}
 		
+		//
 		for (int i = 0; i < andares; i++) {
 			int pessoasNoAndar = sc.nextInt();
 			for (int j = 0; j < pessoasNoAndar; j++) {
 				Requisicao requisicao = new Requisicao();
 				int andarDestino = sc.nextInt();
 				requisicao.setAndarDestino(andarDestino);
-				predio.getAndares().get(i).getFila().add(requisicao); // Essa orientacao a obj ta meio zuada, nao? 
-																	  // A fila é private e podemos adc requisicao?
+				predio.getAndares().get(i).getFila().add(requisicao);
 			}
 		}
 		
@@ -50,7 +54,6 @@ public class Principal{
 	
 	public static void validaEntrada(){
 		// TODO: Validar a entrada na moral e ver se não está rolando contradições dentro da própria entrada fornecida
-		// TODO: MUITO SERIO PRECISAMOS VALIDAR ESSAS ENTRADA FDP!
 		if(andares < 5 || andares > 100 ){
 			System.out.println("Elevadores devem ser de 5 a 100");
 			System.exit(0);
@@ -68,8 +71,7 @@ public class Principal{
 	}
 	
 	public static void main (String[] args) throws FileNotFoundException {
-		//System.out.println("O programa iniciou");
-		
+		System.out.println("O SGE iniciou...");
 		
 		leEntrada(args);
 		validaEntrada();
@@ -78,17 +80,14 @@ public class Principal{
 		
 		// Reservando espaço para vetor de threads
 		Thread[] threads = new Thread[nthreads];
-	
 		
 		// Criando threads
 		for (int i=0; i<threads.length; i++){
-
 			threads[i] = new Elevador(i, andaresIniciais[i], capacidade, predio);
 		}
 	
 		// Iniciando threads
 		for (int i=0; i<threads.length; i++){
-			
 			threads[i].start();
 		}
 	
@@ -102,9 +101,7 @@ public class Principal{
 			}
 		}
 	
-		//System.out.println("O programa terminou");
-		
-		
+		System.out.println("O SGE finalizou!");
 	}
 	
 }
