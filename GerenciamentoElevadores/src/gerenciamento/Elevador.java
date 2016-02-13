@@ -37,8 +37,6 @@ public class Elevador extends Thread {
 			
 			// Desloca-se parando nos andares destinos de suas requisicoes e retorna o andar final apos o trajeto
 			this.andarInicial = percorreTrajeto(atendimentos);
-			
-			break;
 		}
 		
 	}
@@ -52,6 +50,15 @@ public class Elevador extends Thread {
 		}
 		
 		atendimentos.clear();
+		
+		try {
+			sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("Elevador " + this.id + " terminou!!");
 		
 		return andarFinal;
 	}
@@ -71,7 +78,8 @@ public class Elevador extends Thread {
 		// Procura requisicoes no predio
 		List<Integer> andaresPendentes = predio.andaresPendentes();
 		
-		System.out.println("Elevador " + this.id + " vai procurar a melhor opçao");
+		System.out.println("Elevador " + this.id + " vai procurar a melhor opçao dentre os andares pendentes " + andaresPendentes);
+		
 			
 		for (Integer andar : andaresPendentes) {
 			if (Math.abs(andar - this.andarInicial) <= maisProximo && predio.getAndares().get(andar).getTamanhoFila() > maiorFila){ 
