@@ -30,6 +30,10 @@ public class Elevador extends Thread {
 		while(predio.requisicaoPendente()){
 			// Seleciona as requisicoees ate sua capacidade do andar mais próximo
 			atendimentos =  requisicoesMaisProximas();
+			if(atendimentos.size() == 0){
+				System.out.println("Elevador " + this.id + " terminou!!");
+				break;
+			}
 			
 			// Calcula trajeto
 			atendimentos = calculaTrajeto();
@@ -37,6 +41,7 @@ public class Elevador extends Thread {
 			
 			// Desloca-se parando nos andares destinos de suas requisicoes e retorna o andar final apos o trajeto
 			this.andarInicial = percorreTrajeto(atendimentos);
+			System.out.println("Elevador " + this.id + " terminou!!");
 		}
 		
 	}
@@ -58,8 +63,6 @@ public class Elevador extends Thread {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Elevador " + this.id + " terminou!!");
-		
 		return andarFinal;
 	}
 
@@ -80,14 +83,18 @@ public class Elevador extends Thread {
 		
 		System.out.println("Elevador " + this.id + " vai procurar a melhor opçao dentre os andares pendentes " + andaresPendentes);
 		
-			
-		for (Integer andar : andaresPendentes) {
-			if (Math.abs(andar - this.andarInicial) <= maisProximo && predio.getAndares().get(andar).getTamanhoFila() > maiorFila){ 
-				maisProximo = andar;
-				maiorFila = predio.getAndares().get(andar).getTamanhoFila();
+		if(andaresPendentes.size() > 0){
+			for (Integer andar : andaresPendentes) {
+				if (Math.abs(andar - this.andarInicial) <= maisProximo && predio.getAndares().get(andar).getTamanhoFila() > maiorFila){ 
+					maisProximo = andar;
+					maiorFila = predio.getAndares().get(andar).getTamanhoFila();
+				}
 			}
+		}else{
+			semaforo.release();
+			atendimentosMaisProximos = new ArrayList<Requisicao>();
+			return atendimentosMaisProximos;
 		}
-			
 		System.out.println("Elevador " + this.id + " escolheu atender ao andar " + maisProximo);
 		
 		// Remove as requisicoes da fila
