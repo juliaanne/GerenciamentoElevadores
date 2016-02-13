@@ -70,7 +70,6 @@ public class Principal{
 	public static void main (String[] args) throws FileNotFoundException {
 		//System.out.println("O programa iniciou");
 		
-		System.out.println(args[1]);
 		
 		leEntrada(args);
 		validaEntrada();
