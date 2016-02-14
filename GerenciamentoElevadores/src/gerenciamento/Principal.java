@@ -41,7 +41,7 @@ public class Principal{
 		
 		
 		predio = new Predio(andares);
-		printWriter.println("Predio com [" + andares + "] andares criado");
+		printWriter.println("Predio com " + andares + " andares criado");
 		
 		int andar = 0;
 		while(sc.hasNextLine()){
@@ -88,7 +88,7 @@ public class Principal{
 			Requisicao requisicao = new Requisicao();
 			requisicao.setAndarDestino(andarDestino);
 			predio.getAndares().get(andarAtual).getFila().add(requisicao);
-			printWriter.println("Requisi��o (id= "+ requisicao.getId() + ") com destino para o andar: [" + requisicao.getAndarDestino() + "] adicionada no andar [" + andarAtual + "]");
+			printWriter.println("Requisicao com id "+ requisicao.getId() + " e com destino para o andar " + requisicao.getAndarDestino() + " adicionada no andar " + andarAtual);
 		}
 		
 	}
@@ -166,7 +166,7 @@ public class Principal{
 		
 		// Criando threads
 		for (int i=0; i<threads.length; i++){
-			printWriter.println("Elevador[" + i + "] com capacidade [" + capacidade +"] iniciado no andar["+ andaresAtuais.get(i) +"]");
+			printWriter.println("Elevador " + i + " com capacidade " + capacidade +" iniciado no andar "+ andaresAtuais.get(i));
 			threads[i] = new Elevador(i, andaresAtuais.get(i), capacidade, predio);
 		}
 	
@@ -184,8 +184,10 @@ public class Principal{
 				return; 
 			}
 		}
+		
 		printWriter.println("O SGE finalizou!");			
 		System.out.println("O SGE finalizou!");
+		
 		printWriter.close();
 	}
 	

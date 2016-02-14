@@ -1,9 +1,39 @@
-Elevador 0 esta no andar 0 vai procurar a melhor opçao dentre os andares pendentes [0, 1, 2, 3, 4, 5]
+Elevador 0 esta no andar 0 vai procurar a melhor opçao dentre os andares pendentes [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14]
 Elevador 0 escolheu atender ao andar 0
-Elevador 0 no andar 0 atendera para os seguintes destinos: [Destino: 1, Destino: 1, Destino: 3, Destino: 4, Destino: 5]
-Elevador 0 parou no andar 1 para deixar um passageiro.
-Elevador 0 parou no andar 1 para deixar um passageiro.
+Elevador 0 no andar 0 atendera para os seguintes destinos: [Destino: 3, Destino: 6, Destino: 8]
 Elevador 0 parou no andar 3 para deixar um passageiro.
-Elevador 0 parou no andar 4 para deixar um passageiro.
+Elevador 0 parou no andar 6 para deixar um passageiro.
+Elevador 0 parou no andar 8 para deixar um passageiro.
+Elevador 0 terminou no andar 8
+Elevador 0 esta no andar 8 vai procurar a melhor opçao dentre os andares pendentes [3, 4, 6, 7, 8, 9, 11, 12, 13, 14]
+Elevador 0 escolheu atender ao andar 8
+Elevador 0 no andar 8 atendera para os seguintes destinos: [Destino: 13, Destino: 11, Destino: 8, Destino: 5, Destino: 0, Destino: 0]
+Elevador 0 parou no andar 13 para deixar um passageiro.
+Elevador 0 parou no andar 11 para deixar um passageiro.
+Elevador 0 parou no andar 8 para deixar um passageiro.
 Elevador 0 parou no andar 5 para deixar um passageiro.
-Elevador 0 terminou no andar 5
+Elevador 0 parou no andar 0 para deixar um passageiro.
+Elevador 0 parou no andar 0 para deixar um passageiro.
+Elevador 0 terminou no andar 0
+Elevador 0 esta no andar 0 vai procurar a melhor opçao dentre os andares pendentes [3, 4, 6, 7, 9, 11, 12]
+Elevador 0 escolheu atender ao andar 3
+Elevador 0 no andar 3 atendera para os seguintes destinos: [Destino: 4, Destino: 3, Destino: 2, Destino: 0]
+Elevador 0 parou no andar 4 para deixar um passageiro.
+Elevador 0 parou no andar 3 para deixar um passageiro.
+Elevador 0 parou no andar 2 para deixar um passageiro.
+Elevador 0 parou no andar 0 para deixar um passageiro.
+Elevador 0 terminou no andar 0
+Elevador 0 esta no andar 0 vai procurar a melhor opçao dentre os andares pendentes [6, 7, 9, 11, 12]
+Elevador 0 escolheu atender ao andar 6
+Elevador 0 no andar 6 atendera para os seguintes destinos: [Destino: 1]
+Elevador 0 parou no andar 1 para deixar um passageiro.
+Elevador 0 terminou no andar 1
+Elevador 0 esta no andar 1 vai procurar a melhor opçao dentre os andares pendentes [9, 11, 12]
+Elevador 0 escolheu atender ao andar 9
+Elevador 0 no andar 9 atendera para os seguintes destinos: [Destino: 13, Destino: 12, Destino: 5, Destino: 4, Destino: 3]
+Elevador 0 parou no andar 13 para deixar um passageiro.
+Elevador 0 parou no andar 12 para deixar um passageiro.
+Elevador 0 parou no andar 5 para deixar um passageiro.
+Elevador 0 parou no andar 4 para deixar um passageiro.
+Elevador 0 parou no andar 3 para deixar um passageiro.
+Elevador 0 terminou no andar 3

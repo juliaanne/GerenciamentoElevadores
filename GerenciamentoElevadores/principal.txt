@@ -1,111 +1,111 @@
 O SGE iniciou...
-Predio com [15] andares criado
-Requisi��o (id= bd75fc36-c054-48df-9b3e-ab3e6a0d3d41) com destino para o andar: [6] adicionada no andar [0]
-Requisi��o (id= 4e64dc3f-f131-4da4-8a6e-12d8a237c78e) com destino para o andar: [3] adicionada no andar [0]
-Requisi��o (id= ec8e2924-8b87-4c16-8209-468189ea981b) com destino para o andar: [8] adicionada no andar [0]
-Requisi��o (id= 53a5d658-ab08-42d4-a1a3-fcfedcce27a2) com destino para o andar: [0] adicionada no andar [1]
-Requisi��o (id= 1a78d872-07f2-492e-9171-cecd2ad8fe60) com destino para o andar: [8] adicionada no andar [1]
-Requisi��o (id= 9bda6b29-8693-4d49-a381-a3cbdc8d8bac) com destino para o andar: [0] adicionada no andar [1]
-Requisi��o (id= 3402e977-8502-49a6-8fed-39c3df0b13e4) com destino para o andar: [2] adicionada no andar [1]
-Requisi��o (id= d295463a-054d-478d-862e-3aad6610dc6c) com destino para o andar: [5] adicionada no andar [1]
-Requisi��o (id= 854361d5-5b50-4050-9377-f924ac72f959) com destino para o andar: [5] adicionada no andar [2]
-Requisi��o (id= f975dbdc-9539-4189-897f-d3e4bd0efcea) com destino para o andar: [10] adicionada no andar [2]
-Requisi��o (id= 68a0f131-4523-41f2-90b9-80e854fcc835) com destino para o andar: [8] adicionada no andar [2]
-Requisi��o (id= af989636-3cd3-4193-a8d7-5a04ef03a776) com destino para o andar: [9] adicionada no andar [2]
-Requisi��o (id= 3b4dd26a-d768-46b8-85c7-38008baa1ee7) com destino para o andar: [13] adicionada no andar [2]
-Requisi��o (id= a2aaf18b-1553-4e92-9485-b150a10bf725) com destino para o andar: [13] adicionada no andar [2]
-Requisi��o (id= 85100b63-582c-49ab-9a92-268e56166fe4) com destino para o andar: [5] adicionada no andar [2]
-Requisi��o (id= 28cc47d2-7790-4011-80e4-d866ccf612a1) com destino para o andar: [4] adicionada no andar [2]
-Requisi��o (id= 8b1adf1d-2959-4492-8689-695986958291) com destino para o andar: [10] adicionada no andar [3]
-Requisi��o (id= 58460aa5-00af-4755-b440-c45b1886d4f2) com destino para o andar: [3] adicionada no andar [3]
-Requisi��o (id= a08e9eb3-a69c-4a10-ada8-8e5995268a5c) com destino para o andar: [14] adicionada no andar [3]
-Requisi��o (id= 070f6141-901d-4429-95a0-327cbac8a2ed) com destino para o andar: [3] adicionada no andar [3]
-Requisi��o (id= fe4ebfd8-3cf6-4d62-8a24-79c61df18489) com destino para o andar: [5] adicionada no andar [3]
-Requisi��o (id= 49df20b5-ef4c-4288-a9b1-a63a620daa53) com destino para o andar: [13] adicionada no andar [3]
-Requisi��o (id= 1d5b2be4-2c09-4657-b4d6-11c6c515b991) com destino para o andar: [4] adicionada no andar [3]
-Requisi��o (id= 5ad304be-7012-412e-a263-108a3f8d32a0) com destino para o andar: [3] adicionada no andar [3]
-Requisi��o (id= 701afeac-18af-4631-adb1-444cd71e1fa7) com destino para o andar: [2] adicionada no andar [3]
-Requisi��o (id= 283bea4a-22e2-4add-8033-06ea6fbbc1fc) com destino para o andar: [0] adicionada no andar [3]
-Requisi��o (id= bf710f4e-660f-4f55-be57-fc6198a02863) com destino para o andar: [5] adicionada no andar [4]
-Requisi��o (id= 34f38497-3532-4987-b8f9-6256516b5283) com destino para o andar: [7] adicionada no andar [4]
-Requisi��o (id= ed992bca-16e7-42ac-b801-c98b05146745) com destino para o andar: [9] adicionada no andar [4]
-Requisi��o (id= 8025e5d1-3296-442b-ac00-9f66bfe5b1b3) com destino para o andar: [0] adicionada no andar [4]
-Requisi��o (id= ff3df892-679c-40aa-890f-8f739f565545) com destino para o andar: [13] adicionada no andar [5]
-Requisi��o (id= cdd01867-a178-4901-8847-ccb5e5b07eb1) com destino para o andar: [5] adicionada no andar [5]
-Requisi��o (id= bdd90924-b8dc-4f52-9778-876bf8d22533) com destino para o andar: [13] adicionada no andar [5]
-Requisi��o (id= c1047a4a-3bad-43cc-992d-83c90f406b0e) com destino para o andar: [13] adicionada no andar [5]
-Requisi��o (id= 4400c3e6-7286-4163-bb23-50200ec24cea) com destino para o andar: [0] adicionada no andar [5]
-Requisi��o (id= 4e9e5056-16b5-4291-a949-ca6c5c33b5e1) com destino para o andar: [10] adicionada no andar [5]
-Requisi��o (id= 9f4bfb87-8486-4f46-8f07-2b86cb411d66) com destino para o andar: [8] adicionada no andar [6]
-Requisi��o (id= 7ebf8fe7-c679-491e-855b-d5bb8c39734c) com destino para o andar: [1] adicionada no andar [6]
-Requisi��o (id= cd8e2f0d-e3ec-4a71-a212-4d713bd3ab10) com destino para o andar: [14] adicionada no andar [6]
-Requisi��o (id= 123fa175-8426-42b5-81be-b830e4ed5a18) com destino para o andar: [8] adicionada no andar [6]
-Requisi��o (id= 0849ec5a-c944-4612-8a49-4f86ee690183) com destino para o andar: [1] adicionada no andar [6]
-Requisi��o (id= 9943397f-a798-4669-806e-83a80e039d36) com destino para o andar: [13] adicionada no andar [6]
-Requisi��o (id= 365a01a6-7005-41ab-b257-14269dab512e) com destino para o andar: [1] adicionada no andar [6]
-Requisi��o (id= c96c7491-bb04-4c6e-aedb-13826a253e53) com destino para o andar: [11] adicionada no andar [7]
-Requisi��o (id= d41c14cc-dd9c-4c25-ba1f-aaf5077a8837) com destino para o andar: [5] adicionada no andar [7]
-Requisi��o (id= af75b681-e32c-450c-a918-37a6894f2d88) com destino para o andar: [0] adicionada no andar [7]
-Requisi��o (id= 17216fac-76b9-45cd-bcd0-7439d3dda0f7) com destino para o andar: [1] adicionada no andar [7]
-Requisi��o (id= 7744556f-d5b5-4644-bc59-dbf5dd751e09) com destino para o andar: [8] adicionada no andar [7]
-Requisi��o (id= e72ddb7b-8b77-4576-b9f2-374e14242bab) com destino para o andar: [3] adicionada no andar [7]
-Requisi��o (id= 467f44f9-f6fc-4984-bb75-91579d4010ca) com destino para o andar: [3] adicionada no andar [7]
-Requisi��o (id= 9e566246-45fb-48b4-8922-7d5409eee99b) com destino para o andar: [9] adicionada no andar [7]
-Requisi��o (id= 6314f0b8-5af4-4a0f-b11b-c05eb07c7e3e) com destino para o andar: [7] adicionada no andar [7]
-Requisi��o (id= e5b3c73b-8e9f-495f-a51b-dccc62fd11aa) com destino para o andar: [11] adicionada no andar [8]
-Requisi��o (id= 4020ac18-c3bf-4bb9-a71d-b4fde674e344) com destino para o andar: [8] adicionada no andar [8]
-Requisi��o (id= fec609e4-0164-4b50-9bf3-46457d426422) com destino para o andar: [0] adicionada no andar [8]
-Requisi��o (id= f624c7e4-14e4-4a28-b6c2-aa210b0d43e6) com destino para o andar: [5] adicionada no andar [8]
-Requisi��o (id= b5db2eb5-f980-4519-93d8-aab723d64a1d) com destino para o andar: [0] adicionada no andar [8]
-Requisi��o (id= b7afaf17-77e4-41b6-a724-b53ec8274de2) com destino para o andar: [13] adicionada no andar [8]
-Requisi��o (id= abc825b6-626b-4725-9254-b8909bd5d17a) com destino para o andar: [3] adicionada no andar [8]
-Requisi��o (id= fd2cc6c4-20aa-4536-862f-947144f8b8a7) com destino para o andar: [8] adicionada no andar [8]
-Requisi��o (id= 318d7b04-57e7-4369-b4cd-9103d6fd5d05) com destino para o andar: [1] adicionada no andar [8]
-Requisi��o (id= 8c6cff86-fa52-441a-9563-f254f12f1558) com destino para o andar: [11] adicionada no andar [8]
-Requisi��o (id= 98d56320-871b-47ef-bf14-f2d1e69288b3) com destino para o andar: [10] adicionada no andar [8]
-Requisi��o (id= 5aa23c98-3844-4982-ada5-9bbd89f93a12) com destino para o andar: [11] adicionada no andar [8]
-Requisi��o (id= b1527a22-0bdc-4f15-a639-f228ffa8020d) com destino para o andar: [7] adicionada no andar [9]
-Requisi��o (id= def1dac7-9533-4d46-b490-66325674ced1) com destino para o andar: [1] adicionada no andar [9]
-Requisi��o (id= 91adf967-75ae-4114-ad63-669a01c7a22c) com destino para o andar: [12] adicionada no andar [9]
-Requisi��o (id= 174831f1-e62a-4224-9a2d-5bd24967c8c7) com destino para o andar: [13] adicionada no andar [9]
-Requisi��o (id= 3aab79e4-67bc-448f-aa7a-d5810c09d2f8) com destino para o andar: [9] adicionada no andar [9]
-Requisi��o (id= c7723296-7baa-4f48-bad6-2dbf4709df3b) com destino para o andar: [6] adicionada no andar [9]
-Requisi��o (id= 3b88a04e-f1b4-4ee6-afb3-f023bc43c9fe) com destino para o andar: [12] adicionada no andar [9]
-Requisi��o (id= 5efc1bf0-ee00-45d1-81db-7ebf837cfb37) com destino para o andar: [4] adicionada no andar [9]
-Requisi��o (id= 1449baaf-015b-4cf7-92a8-207f8fd19d27) com destino para o andar: [13] adicionada no andar [9]
-Requisi��o (id= c10a51a9-afe0-4954-857f-7a6542a76ce5) com destino para o andar: [5] adicionada no andar [9]
-Requisi��o (id= 58fa4824-c30e-4419-9fb8-e11cdc301209) com destino para o andar: [3] adicionada no andar [9]
-Requisi��o (id= 87ec1dda-a4e5-4cc4-8104-df926c3c894c) com destino para o andar: [9] adicionada no andar [11]
-Requisi��o (id= cf72e3d6-bf06-4814-9621-6063a914f153) com destino para o andar: [12] adicionada no andar [11]
-Requisi��o (id= 6b7c9cad-2efe-4e3e-9a60-c5f78a82e191) com destino para o andar: [0] adicionada no andar [11]
-Requisi��o (id= 5e29fc06-d79d-46f2-abac-18d257233ffe) com destino para o andar: [8] adicionada no andar [11]
-Requisi��o (id= f9e1ed9d-e402-4c07-b86a-1ff3a522dd3a) com destino para o andar: [5] adicionada no andar [11]
-Requisi��o (id= 749cc0eb-8bfe-49f9-880a-1a27ae015e47) com destino para o andar: [11] adicionada no andar [12]
-Requisi��o (id= b0506a7f-14f2-48ad-91d4-7e1773c8f3c6) com destino para o andar: [7] adicionada no andar [12]
-Requisi��o (id= 77f2acc2-fa5f-4a35-b365-dac3b69b31cb) com destino para o andar: [12] adicionada no andar [12]
-Requisi��o (id= b011b10d-12dd-4f18-b1b2-7da48cbfdca6) com destino para o andar: [13] adicionada no andar [12]
-Requisi��o (id= 6f210055-7519-460f-ba56-f026e12134e1) com destino para o andar: [14] adicionada no andar [12]
-Requisi��o (id= 0f7efb69-55ae-40a1-bf1a-2447bd41a2de) com destino para o andar: [8] adicionada no andar [12]
-Requisi��o (id= f8f52489-d654-4e0f-ad94-2f4abf95e894) com destino para o andar: [5] adicionada no andar [12]
-Requisi��o (id= 64bf6d9d-91f1-47ec-9119-983cbe8ff78a) com destino para o andar: [1] adicionada no andar [12]
-Requisi��o (id= 1f79ee5f-6f9d-4f71-a59e-53a3585d77d0) com destino para o andar: [5] adicionada no andar [12]
-Requisi��o (id= 8ad9b049-f0d9-4731-8af1-aa11beabadb9) com destino para o andar: [14] adicionada no andar [12]
-Requisi��o (id= de0c7368-e53a-4050-a3b4-2fa069964048) com destino para o andar: [5] adicionada no andar [12]
-Requisi��o (id= 7b5c852b-a2d4-43b7-89de-7ee2453c22d5) com destino para o andar: [8] adicionada no andar [12]
-Requisi��o (id= e4275045-177f-4f09-a00b-fd5243f50837) com destino para o andar: [14] adicionada no andar [12]
-Requisi��o (id= 5146478d-d220-409a-8f0b-13569a126a6a) com destino para o andar: [5] adicionada no andar [12]
-Requisi��o (id= c692ff21-5efa-4469-a42a-9a5807b8b260) com destino para o andar: [9] adicionada no andar [12]
-Requisi��o (id= 24ab340c-1406-4879-ad2c-07459fd9f1a4) com destino para o andar: [10] adicionada no andar [12]
-Requisi��o (id= 10a1398f-e3e6-45a4-a507-621fdd568499) com destino para o andar: [11] adicionada no andar [12]
-Requisi��o (id= a1c4b307-3239-48f9-8a6a-91bd5eb142b1) com destino para o andar: [3] adicionada no andar [12]
-Requisi��o (id= fd7871df-d21b-4006-ae6c-7afc473f5f4c) com destino para o andar: [12] adicionada no andar [13]
-Requisi��o (id= b146e6ac-c404-4f89-ba4c-18ea7733d1f8) com destino para o andar: [12] adicionada no andar [14]
-Requisi��o (id= bec4ad89-c2f4-4f8d-a89c-e0d5f0faaeb0) com destino para o andar: [11] adicionada no andar [14]
-Requisi��o (id= 47b5c93a-a5c7-44d0-b013-d93aee1e9990) com destino para o andar: [2] adicionada no andar [14]
-Requisi��o (id= 36093959-c9ba-417f-b451-c91d8d0f1b9c) com destino para o andar: [9] adicionada no andar [14]
-Elevador[0] com capacidade [6] iniciado no andar[0]
-Elevador[1] com capacidade [6] iniciado no andar[0]
-Elevador[2] com capacidade [6] iniciado no andar[0]
-Elevador[3] com capacidade [6] iniciado no andar[0]
-Elevador[4] com capacidade [6] iniciado no andar[0]
+Predio com 15 andares criado
+Requisicao com id 978ea909-0608-4886-8d91-85538ff99322 e com destino para o andar 6 adicionada no andar 0
+Requisicao com id 7c979a1f-f968-4d47-9a7e-997f92feae1b e com destino para o andar 3 adicionada no andar 0
+Requisicao com id 892a4b6d-47b1-4386-a5b8-ce065bf542dd e com destino para o andar 8 adicionada no andar 0
+Requisicao com id 89ae951e-03aa-41e6-9e7b-59af88f42245 e com destino para o andar 0 adicionada no andar 1
+Requisicao com id 43c9ee28-9e8f-488f-9ded-177a3863d0c2 e com destino para o andar 8 adicionada no andar 1
+Requisicao com id 09d46d80-c08e-4b7c-a183-d4defef3e068 e com destino para o andar 0 adicionada no andar 1
+Requisicao com id e1649811-eac0-4b4b-8032-60fa1b8739a2 e com destino para o andar 2 adicionada no andar 1
+Requisicao com id 1a8f0da7-e495-444a-acd1-4df6bf63b9b9 e com destino para o andar 5 adicionada no andar 1
+Requisicao com id 7462bf48-ccd9-40fb-9409-2aef4d960dd7 e com destino para o andar 5 adicionada no andar 2
+Requisicao com id 51a18fdb-a875-4b79-acb7-d7ead7d86344 e com destino para o andar 10 adicionada no andar 2
+Requisicao com id e65fe87f-c4f7-4b77-b199-05b808faadeb e com destino para o andar 8 adicionada no andar 2
+Requisicao com id 03024133-b383-4200-96c6-1095d99fcdb8 e com destino para o andar 9 adicionada no andar 2
+Requisicao com id 2caa3c6b-c139-4781-80e7-3c3b01d45839 e com destino para o andar 13 adicionada no andar 2
+Requisicao com id 270c9c52-e0b0-4d41-a1d2-3aa15d0c713f e com destino para o andar 13 adicionada no andar 2
+Requisicao com id 5cf59ceb-0140-406d-b0c1-9e70498fca5d e com destino para o andar 5 adicionada no andar 2
+Requisicao com id 3ed115a3-e3c9-4114-b9e4-7c1032427848 e com destino para o andar 4 adicionada no andar 2
+Requisicao com id 83ed70c1-32aa-40ad-b95d-4e891d13331c e com destino para o andar 10 adicionada no andar 3
+Requisicao com id cb62d14a-b4cd-4d41-ad50-334c9b0dc75c e com destino para o andar 3 adicionada no andar 3
+Requisicao com id ba4ca91f-2e78-4e10-be82-ed24ecf11d3c e com destino para o andar 14 adicionada no andar 3
+Requisicao com id 8d02d069-d57c-41d0-8b95-9438b7698133 e com destino para o andar 3 adicionada no andar 3
+Requisicao com id 0ae9b86b-5c9f-4328-9b45-8c6425bb2e54 e com destino para o andar 5 adicionada no andar 3
+Requisicao com id 721a637a-479a-4a7a-9834-eefdf29ac559 e com destino para o andar 13 adicionada no andar 3
+Requisicao com id 589c3fb0-5539-42c6-a6f4-c886b77685da e com destino para o andar 4 adicionada no andar 3
+Requisicao com id 032fc5e0-39e4-4193-ac61-c2d1510a9532 e com destino para o andar 3 adicionada no andar 3
+Requisicao com id d52722ed-4b55-4fb1-8563-bdd76e0c432d e com destino para o andar 2 adicionada no andar 3
+Requisicao com id 8cecfc22-4b10-48a8-9487-58ed44fb8747 e com destino para o andar 0 adicionada no andar 3
+Requisicao com id 86014eba-4893-4a64-8227-5257f3c191e5 e com destino para o andar 5 adicionada no andar 4
+Requisicao com id 42ecc859-44b5-4cec-9c28-d1a76ac3b4d9 e com destino para o andar 7 adicionada no andar 4
+Requisicao com id e8f5d150-0b34-45ab-818e-a94380b294c9 e com destino para o andar 9 adicionada no andar 4
+Requisicao com id 04065b0f-3b15-4a7a-87fe-263a184755d3 e com destino para o andar 0 adicionada no andar 4
+Requisicao com id 84353760-af8d-4d8b-8a28-5e9dcc33d7ca e com destino para o andar 13 adicionada no andar 5
+Requisicao com id 1ab0fca4-48c5-422c-9395-5c6f01f96937 e com destino para o andar 5 adicionada no andar 5
+Requisicao com id 0beef6db-ef41-46d9-8adc-95da19da7b59 e com destino para o andar 13 adicionada no andar 5
+Requisicao com id 5abbca79-5c69-49e8-803d-e7251aedf456 e com destino para o andar 13 adicionada no andar 5
+Requisicao com id d9433d70-dc20-4bfa-913f-e23d60fd3603 e com destino para o andar 0 adicionada no andar 5
+Requisicao com id a9131ef8-423d-4c5f-8191-1d9b7331ddfc e com destino para o andar 10 adicionada no andar 5
+Requisicao com id be27b631-0e75-4b86-98da-cd67b6c84c50 e com destino para o andar 8 adicionada no andar 6
+Requisicao com id c6ece7a3-e930-4e74-aefd-90122550bac1 e com destino para o andar 1 adicionada no andar 6
+Requisicao com id b92d7982-32cd-4c66-b870-b44d9a457b1a e com destino para o andar 14 adicionada no andar 6
+Requisicao com id 5fa6e577-9dc6-41d3-aa76-c84412dbe03a e com destino para o andar 8 adicionada no andar 6
+Requisicao com id b35b0957-284f-4d38-9627-b9ce58f84d34 e com destino para o andar 1 adicionada no andar 6
+Requisicao com id 26f9a55a-3351-461d-8506-6a30cbb81381 e com destino para o andar 13 adicionada no andar 6
+Requisicao com id 97ab8483-bd1b-477b-b2b5-378f8c4d0589 e com destino para o andar 1 adicionada no andar 6
+Requisicao com id 1eed2a89-b739-4932-a3df-3b91fbbafdc1 e com destino para o andar 11 adicionada no andar 7
+Requisicao com id e6e0e272-6fb5-4b82-819b-dc75e8a3f4e0 e com destino para o andar 5 adicionada no andar 7
+Requisicao com id fa419d66-f515-43f0-85f5-2c117fc930c4 e com destino para o andar 0 adicionada no andar 7
+Requisicao com id 8ec17b13-2ba8-400b-8937-5e4518b8a1fb e com destino para o andar 1 adicionada no andar 7
+Requisicao com id afe4c1d0-a4d8-4ded-8656-eccf22a789dd e com destino para o andar 8 adicionada no andar 7
+Requisicao com id 09f84f15-c813-4dd9-9938-6504afccab59 e com destino para o andar 3 adicionada no andar 7
+Requisicao com id 9e279f08-05e4-49b7-8ff3-c596f272b446 e com destino para o andar 3 adicionada no andar 7
+Requisicao com id 012681dd-7841-44da-bddd-3588cab12992 e com destino para o andar 9 adicionada no andar 7
+Requisicao com id 06b57c6d-89ff-47e9-b5fe-0cf8b787bb92 e com destino para o andar 7 adicionada no andar 7
+Requisicao com id 1f12ea17-1abb-497e-ada8-48918e0d434c e com destino para o andar 11 adicionada no andar 8
+Requisicao com id 573bd10a-f599-43cb-ba8a-479f95702079 e com destino para o andar 8 adicionada no andar 8
+Requisicao com id a5eb1753-a5ec-4c16-bb1c-39c3f152e2fd e com destino para o andar 0 adicionada no andar 8
+Requisicao com id 814c6090-561b-41e4-9f59-8e050259cd33 e com destino para o andar 5 adicionada no andar 8
+Requisicao com id 23b7c6a1-6ea2-49b2-b923-342a9aa9098e e com destino para o andar 0 adicionada no andar 8
+Requisicao com id b15ed4c6-025a-4bf7-8c36-a2bfe4ce52d8 e com destino para o andar 13 adicionada no andar 8
+Requisicao com id 91523726-f564-4ef7-9e5e-05d053654bf8 e com destino para o andar 3 adicionada no andar 8
+Requisicao com id 081dce1c-94e1-4e5a-9623-f5bf73784ae9 e com destino para o andar 8 adicionada no andar 8
+Requisicao com id b7742a1c-9918-4986-9a6c-7c82df4655ef e com destino para o andar 1 adicionada no andar 8
+Requisicao com id d0a07190-88f9-4b0f-9576-7f6b2c1f9400 e com destino para o andar 11 adicionada no andar 8
+Requisicao com id 49b7202b-2fd2-44e5-8033-0d45d3214629 e com destino para o andar 10 adicionada no andar 8
+Requisicao com id d4d9e859-936a-417e-8089-412762cfefd8 e com destino para o andar 11 adicionada no andar 8
+Requisicao com id aae416f8-b737-472d-b62d-a44c95571b62 e com destino para o andar 7 adicionada no andar 9
+Requisicao com id ce937090-0b7b-47c9-9f23-87415deb80cc e com destino para o andar 1 adicionada no andar 9
+Requisicao com id 2db00c28-1a19-4202-961e-2ff271d4b766 e com destino para o andar 12 adicionada no andar 9
+Requisicao com id b5a1ebd5-8102-40e6-ac91-a27bee924265 e com destino para o andar 13 adicionada no andar 9
+Requisicao com id b22cb316-41df-4312-a076-efbc1ff98571 e com destino para o andar 9 adicionada no andar 9
+Requisicao com id 6c80ad7d-efc5-434d-bdc8-f9f0fd0a4678 e com destino para o andar 6 adicionada no andar 9
+Requisicao com id 882b22f8-a05a-4bff-9445-b3289aeaff83 e com destino para o andar 12 adicionada no andar 9
+Requisicao com id a36fa2d8-2756-4bf9-9279-95a156562a2a e com destino para o andar 4 adicionada no andar 9
+Requisicao com id a5097fb9-331b-4716-b121-b294029b9e3f e com destino para o andar 13 adicionada no andar 9
+Requisicao com id bac7f484-2833-4214-8aaa-8c6d19b3690a e com destino para o andar 5 adicionada no andar 9
+Requisicao com id b2e888c5-a054-4748-b87c-ce67d3e67908 e com destino para o andar 3 adicionada no andar 9
+Requisicao com id 0ad8a473-e46a-456a-8761-033cefc78766 e com destino para o andar 9 adicionada no andar 11
+Requisicao com id cf7878f9-c92d-498c-a43c-457942a294ff e com destino para o andar 12 adicionada no andar 11
+Requisicao com id 08bd6589-e604-442f-9ad0-29b6ffb48187 e com destino para o andar 0 adicionada no andar 11
+Requisicao com id 3bc8a0ac-5630-4026-b55b-77c3e7554731 e com destino para o andar 8 adicionada no andar 11
+Requisicao com id bd83aae6-ea76-4be1-8b03-20d66c816f11 e com destino para o andar 5 adicionada no andar 11
+Requisicao com id e2ff3e76-e80d-4092-9aae-12581c4bf208 e com destino para o andar 11 adicionada no andar 12
+Requisicao com id 1fd9429f-c7b5-4166-907e-3eb1332a7a7c e com destino para o andar 7 adicionada no andar 12
+Requisicao com id 474376f6-b770-4260-90e9-fe9223ab566d e com destino para o andar 12 adicionada no andar 12
+Requisicao com id 006aef9f-2736-4b4f-ab74-977c283fa735 e com destino para o andar 13 adicionada no andar 12
+Requisicao com id 6ac0b470-9114-4a34-8d31-a023e8281533 e com destino para o andar 14 adicionada no andar 12
+Requisicao com id 8309202e-58ec-43e3-874a-31f45e1f6967 e com destino para o andar 8 adicionada no andar 12
+Requisicao com id 2251b4a7-a2b0-4083-8ed4-f90fd6dcc739 e com destino para o andar 5 adicionada no andar 12
+Requisicao com id 5cfbea82-9b48-464f-9850-8a74076d2a8f e com destino para o andar 1 adicionada no andar 12
+Requisicao com id aedbf97f-2254-439a-b86a-2559a2164138 e com destino para o andar 5 adicionada no andar 12
+Requisicao com id e19aa7ec-39b2-4dc0-a2ef-96a71229a3ac e com destino para o andar 14 adicionada no andar 12
+Requisicao com id db144679-97c9-41f2-a9d5-e7aa37b857a8 e com destino para o andar 5 adicionada no andar 12
+Requisicao com id 410daa53-6e8b-4e7b-b651-0a49ec404c4d e com destino para o andar 8 adicionada no andar 12
+Requisicao com id 9489c737-8fec-4985-b90e-224de161ac12 e com destino para o andar 14 adicionada no andar 12
+Requisicao com id 73b7a02e-468a-4717-86c1-3abaf9ddc281 e com destino para o andar 5 adicionada no andar 12
+Requisicao com id 8fae89ef-2b44-48ad-9ff6-7378495bd231 e com destino para o andar 9 adicionada no andar 12
+Requisicao com id 408515d2-2247-4c1a-bcc1-20ea975b6d31 e com destino para o andar 10 adicionada no andar 12
+Requisicao com id aa5728c4-bcf7-4738-a386-00c33ac99b10 e com destino para o andar 11 adicionada no andar 12
+Requisicao com id 95ff7fe6-058b-461c-bb23-534bf2d0b946 e com destino para o andar 3 adicionada no andar 12
+Requisicao com id 3a566df0-37a9-4c81-8f2d-d4c404da6c7d e com destino para o andar 12 adicionada no andar 13
+Requisicao com id f49f789e-3207-4dac-9519-a6494f50781c e com destino para o andar 12 adicionada no andar 14
+Requisicao com id db3bfc17-1715-43c9-a4f6-bf5915597fdc e com destino para o andar 11 adicionada no andar 14
+Requisicao com id 4b6d895e-3454-477f-88a3-0d7497d26b09 e com destino para o andar 2 adicionada no andar 14
+Requisicao com id 8040c17d-390e-42c7-8b1d-80aeb0b86ba1 e com destino para o andar 9 adicionada no andar 14
+Elevador 0 com capacidade 6 iniciado no andar 0
+Elevador 1 com capacidade 6 iniciado no andar 0
+Elevador 2 com capacidade 6 iniciado no andar 0
+Elevador 3 com capacidade 6 iniciado no andar 0
+Elevador 4 com capacidade 6 iniciado no andar 0
 O SGE finalizou!
