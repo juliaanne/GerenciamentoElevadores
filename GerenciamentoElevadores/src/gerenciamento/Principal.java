@@ -83,12 +83,12 @@ public class Principal{
 			System.exit(0);
 		}
 		
-		for(int i = 1; i < quantidadeRequisicoes; i++){
-			int andarDestino = Integer.parseInt(requisicoesSplited[i]);
+		for(int i = 0; i < quantidadeRequisicoes; i++){
+			int andarDestino = Integer.parseInt(requisicoesSplited[i+1]);
 			Requisicao requisicao = new Requisicao();
 			requisicao.setAndarDestino(andarDestino);
 			predio.getAndares().get(andarAtual).getFila().add(requisicao);
-			printWriter.println("Requisição (id= "+ requisicao.getId() + ") com destino para o andar: [" + requisicao.getAndarDestino() + "] adicionada no andar [" + andarAtual + "]");
+			printWriter.println("Requisiï¿½ï¿½o (id= "+ requisicao.getId() + ") com destino para o andar: [" + requisicao.getAndarDestino() + "] adicionada no andar [" + andarAtual + "]");
 		}
 		
 	}
