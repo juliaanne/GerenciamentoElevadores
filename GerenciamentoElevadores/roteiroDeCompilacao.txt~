@@ -1,0 +1,10 @@
+A compilação do programa deve ser através do javac, o compilador do Java. Para compilá-lo basta entrar na pasta aonde estão localizados os .java (pasta gerenciamento) e executar o comando:
+$ javac *.java
+
+Isto gerará todos os .class necessários do projeto. Para a execução do mesmo, deve-se subir para a pasta acima através do comando:
+$ cd ../
+
+E após isto, executar a classe principal por meio do comando:
+$ java gerenciamento.Principal < entrada.txt
+
+Que coloca como entrada para o programa o arquivo de texto “entrada.txt”.

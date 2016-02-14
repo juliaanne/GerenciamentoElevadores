@@ -1,0 +1,16 @@
+O SGE iniciou...
+Predio com 5 andares criado
+Requisicao com id 5d8e350e-d83b-49b0-8d84-4144261549d8 e com destino para o andar 2 adicionada no andar 0
+Requisicao com id 43f69dd9-78ce-4b74-9c27-bd2f5e330f57 e com destino para o andar 1 adicionada no andar 2
+Requisicao com id c607448a-77a2-4d77-96c3-c44187f5940d e com destino para o andar 0 adicionada no andar 2
+Requisicao com id e31eb280-2768-458e-a06b-e00c46217673 e com destino para o andar 1 adicionada no andar 2
+Requisicao com id dc58d1fd-0188-426f-bf69-edf7a6d67708 e com destino para o andar 4 adicionada no andar 2
+Requisicao com id 9d434a7e-f2cd-4134-9aee-dc1d2a8a38a2 e com destino para o andar 2 adicionada no andar 4
+Requisicao com id 252fa44f-29de-4324-886e-054e54c1dbba e com destino para o andar 3 adicionada no andar 4
+Requisicao com id b8c62654-0988-43b4-b43d-70325ac2c9cf e com destino para o andar 3 adicionada no andar 4
+Elevador 0 com capacidade 5 iniciado no andar 4
+Elevador 1 com capacidade 5 iniciado no andar 4
+Elevador 2 com capacidade 5 iniciado no andar 3
+Elevador 3 com capacidade 5 iniciado no andar 3
+Elevador 4 com capacidade 5 iniciado no andar 0
+O SGE finalizou!

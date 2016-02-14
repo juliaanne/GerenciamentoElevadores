@@ -1,2 +1,0 @@
-Elevador 4 esta no andar 0 vai procurar a melhor opçao dentre os andares pendentes []
-Elevador 4 terminou no andar 0
