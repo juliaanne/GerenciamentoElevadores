@@ -1,0 +1,9 @@
+Elevador 4 esta no andar 0 vai procurar a melhor opçao dentre os andares pendentes [3, 4, 5]
+Elevador 4 escolheu atender ao andar 3
+Elevador 4 no andar 3 atendera para os seguintes destinos: [Destino: 4, Destino: 2, Destino: 1, Destino: 1, Destino: 0]
+Elevador 4 parou no andar 4 para deixar um passageiro.
+Elevador 4 parou no andar 2 para deixar um passageiro.
+Elevador 4 parou no andar 1 para deixar um passageiro.
+Elevador 4 parou no andar 1 para deixar um passageiro.
+Elevador 4 parou no andar 0 para deixar um passageiro.
+Elevador 4 terminou no andar 0
