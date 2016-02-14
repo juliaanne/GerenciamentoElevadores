@@ -85,6 +85,13 @@ public class Principal{
 		
 		for(int i = 0; i < quantidadeRequisicoes; i++){
 			int andarDestino = Integer.parseInt(requisicoesSplited[i+1]);
+			
+			if(andarDestino == i){
+				printWriter.println("Na entrada, as requisicoes não devem possuir o andar destino igual ao andar de partida");
+				System.out.println("Na entrada,  as requisicoes não devem possuir o andar destino igual ao andar de partida");
+				System.exit(0);	
+			}
+			
 			Requisicao requisicao = new Requisicao();
 			requisicao.setAndarDestino(andarDestino);
 			predio.getAndares().get(andarAtual).getFila().add(requisicao);
