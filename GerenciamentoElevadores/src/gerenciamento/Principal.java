@@ -42,19 +42,18 @@ public class Principal{
 		
 		int andar = 0;
 		while(sc.hasNextLine()){
+			validaAndares(andar);
 			String requisicoes = sc.nextLine();
 			validaRequisicoes(requisicoes, andar);
 			andar++;
-			validaAndares(andar);
 		}
-		
 		validaQuantidadeAndares(andar);
 		
 		sc.close();
 	}
 	
 	private static void validaAndares(int qtdeAndares) {
-		if(qtdeAndares > andares){
+		if(qtdeAndares >= andares){
 			printWriter.println("Na entrada, não deve existir requisicoes sobrando");
 			System.out.println("Na entrada, não deve existir requisicoes sobrando");
 			System.exit(0);
