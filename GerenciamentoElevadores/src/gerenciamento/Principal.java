@@ -38,11 +38,10 @@ public class Principal{
 		validaAndaresIniciais(andaresIniciais);
 		
 		// Instanciando predio
-		
-		
 		predio = new Predio(andares);
 		printWriter.println("Predio com " + andares + " andares criado");
 		
+		// Lendo as requisicoes
 		int andar = 0;
 		while(sc.hasNextLine()){
 			validaAndares(andar);
@@ -50,13 +49,13 @@ public class Principal{
 			validaRequisicoes(requisicoes, andar);
 			andar++;
 		}
-		
 		validaQuantidadeAndares(andar);
 		
 		sc.close();
 	}
 	
 	private static void validaAndares(int qtdeAndares) {
+		// Valida se ha mais requisicoes do que andares
 		if(qtdeAndares >= andares){
 			printWriter.println("Na entrada, não deve existir requisicoes sobrando");
 			System.out.println("Na entrada, não deve existir requisicoes sobrando");
@@ -65,9 +64,10 @@ public class Principal{
 	}
 
 	private static void validaQuantidadeAndares(int qtdeAndares) {
+		// Valida se ha requisicoes em cada andar
 		if(qtdeAndares != andares){
-			printWriter.println("Na entrada, todos os andares necessitam possuir requisicoes.");
-			System.out.println("Na entrada, todos os andares necessitam possuir requisicoes.");
+			printWriter.println("Na entrada, todos os andares necessitam possuir requisicoes");
+			System.out.println("Na entrada, todos os andares necessitam possuir requisicoes");
 			System.exit(0);
 		}
 	}
@@ -77,6 +77,7 @@ public class Principal{
 		
 		int quantidadeRequisicoes = Integer.parseInt(requisicoesSplited[0]);
 		
+		// Valida se ha andar destino para cada pessoa na fila
 		if(requisicoesSplited.length != quantidadeRequisicoes+1){
 			printWriter.println("Na entrada, use #pessoasNaFila e os respectivos destinos de CADA pessoa na fila");
 			System.out.println("Na entrada, use #pessoasNaFila e os respectivos destinos de CADA pessoa na fila");
@@ -85,13 +86,15 @@ public class Principal{
 		
 		for(int i = 0; i < quantidadeRequisicoes; i++){
 			int andarDestino = Integer.parseInt(requisicoesSplited[i+1]);
-			
+		
+			// Valida se o andar destino e o andar de partida é o mesmo
 			if(andarDestino == i){
 				printWriter.println("Na entrada, as requisicoes não devem possuir o andar destino igual ao andar de partida");
 				System.out.println("Na entrada,  as requisicoes não devem possuir o andar destino igual ao andar de partida");
 				System.exit(0);	
 			}
 			
+			// Instancia a requisicao no seu referido andar
 			Requisicao requisicao = new Requisicao();
 			requisicao.setAndarDestino(andarDestino);
 			predio.getAndares().get(andarAtual).getFila().add(requisicao);
@@ -103,6 +106,7 @@ public class Principal{
 	private static void validaAndaresIniciais(String andaresIniciais) {
 		String[] andaresSplited = andaresIniciais.split(" ");
 		
+		// Valida se ha um andar inicial para cada elevador
 		if(andaresSplited.length != elevadores){
 			printWriter.println("Na entrada, defina andares iniciais para CADA elevador");
 			System.out.println("Na entrada, defina andares iniciais para CADA elevador");
@@ -112,6 +116,7 @@ public class Principal{
 		for (int i=0; i < elevadores; i++) {
 			int andarInicialAtual = Integer.parseInt(andaresSplited[i]); 
 			
+			// Valida se os andares iniciais sao validos
 			if(andarInicialAtual >= andares){
 				printWriter.println("Na entrada, os andares iniciais devem existir no predio");
 				System.out.println("Na entrada, os andares iniciais devem existir no predio");
@@ -127,6 +132,7 @@ public class Principal{
 	public static void validaAEC(String aec){
 		String[] aecSplited = aec.split(" ");
 		
+		// Valida se ha definicao de andares, elevadores e capacidade
 		if(aecSplited.length != 3){
 			printWriter.println("Na entrada, use #andares #elevadores #capacidade");
 			System.out.println("Na entrada, use #andares #elevadores #capacidade");
@@ -137,18 +143,21 @@ public class Principal{
 		elevadores = Integer.parseInt(aecSplited[1]);
 		capacidade = Integer.parseInt(aecSplited[2]);
 		
+		// Valida quantidade de andares
 		if(andares < 5 || andares > 100 ){
 			printWriter.println("Elevadores devem ser de 5 a 100");
 			System.out.println("Elevadores devem ser de 5 a 100");
 			System.exit(0);
 		}
 		
+		// Valida quantidade de elevadores
 		if(elevadores < 5 || elevadores > 20 ){
 			printWriter.println("Elevadores devem ser de 5 a 20");
 			System.out.println("Elevadores devem ser de 5 a 20");
 			System.exit(0);
 		}
 		
+		// Valida capacidade
 		if(capacidade < 5 || capacidade > 20 ){
 			printWriter.println("Capacidade deve ser de 5 a 20");
 			System.out.println("Capacidade deve ser de 5 a 20");
@@ -157,7 +166,7 @@ public class Principal{
 	}
 	
 	public static void main (String[] args) throws IOException {
-		
+		// Cria o arquivo de log da thread Principal
 		arquivo = new File("principal.txt");
 		printWriter = new PrintWriter(arquivo);
 		

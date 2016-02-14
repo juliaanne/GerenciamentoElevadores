@@ -33,6 +33,7 @@ public class Predio {
 	public synchronized boolean requisicaoPendente(){
 		boolean result = false;
 		
+		// Verifica se ainda tem requisicao na fila de algum andar, ou seja, se ha alguma fila com tamanho diferente de zero
 		for (Andar andar : andares) {
 			if(andar.getTamanhoFila() != 0){
 				result = true;
@@ -47,8 +48,10 @@ public class Predio {
 	public List<Integer> andaresPendentes(){
 		List<Integer> andaresPendentes = new ArrayList<>();
 		
+		// Para cada andar que ainda tem requisicao na fila, ou seja, tamanho da fila diferente de zero
 		for (Andar andar : andares) {
 			if(andar.getTamanhoFila() != 0){
+				// Retorna o numero do andar
 				andaresPendentes.add(andar.getNumero());
 			}
 		}

@@ -62,21 +62,23 @@ public class Elevador extends Thread {
 	}
 	
 	private void percorreTrajeto(List<Requisicao> atendimentosAtuais) {
-		
-		for (Requisicao requisicao : atendimentosAtuais) {
-			this.andarAtual = requisicao.getAndarDestino();
-			printWriter.println("Elevador " + this.id + " parou no andar " + requisicao.getAndarDestino() + " para deixar um passageiro.");
+		// Enquanto houver requisicao na fila de atendimentos
+		while(atendimentosAtuais.size() != 0){
+			// Desloca-se até o andar destino
+			this.andarAtual = atendimentosAtuais.get(0).getAndarDestino();
+			printWriter.println("Elevador " + this.id + " parou no andar " + this.andarAtual  + " para deixar um passageiro.");
 			System.out.println("Elevador " + this.id + " parou no andar " + this.andarAtual + " para deixar um passageiro.");
+			// Remove o passageiro do elevador
+			atendimentosAtuais.remove(0);
 			
+			// Espera um pouco até a proxima iteracao
 			try {
 				sleep(200);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			
 		}
 		
-		atendimentos.clear();
 	}
 
 
@@ -84,6 +86,7 @@ public class Elevador extends Thread {
 		int menorDistancia = predio.getNumeroAndares(), maiorFila = 0, maisProximo = predio.getNumeroAndares();
 		List<Requisicao> atendimentosMaisProximos;
 		
+		// Decrementa o semaforo de um sinal
 		try {
 			semaforo.acquire();
 		} catch (InterruptedException e) {
@@ -96,16 +99,23 @@ public class Elevador extends Thread {
 		printWriter.println("Elevador " + this.id + " esta no andar " + this.andarAtual + " vai procurar a melhor opçao dentre os andares pendentes " + andaresPendentes);
 		System.out.println("Elevador " + this.id + " esta no andar " + this.andarAtual + " vai procurar a melhor opçao dentre os andares pendentes " + andaresPendentes);
 		
+		// Se nao houver andares pendentes retorna
 		if(andaresPendentes.size() == 0){
 			semaforo.release();
 			atendimentosMaisProximos = new ArrayList<Requisicao>();
 			return atendimentosMaisProximos;
 		}
 	
+		// Para cada andar pendente
 		for (Integer andar : andaresPendentes) {
+			// Calcula a distancia do andar atual até o andar pendente
 			int distancia = Math.abs(andar - this.andarAtual);
 			
-			if ( distancia < menorDistancia || (distancia == menorDistancia && predio.getAndares().get(andar).getTamanhoFila() > maiorFila)){ 
+			// Caso a distancia obtida seja menor do que a menor distancia guardada
+			// OU 
+			// A distancia obtida for igual a menor distancia guardada E a fila do andar for maior
+			if ( distancia < menorDistancia || (distancia == menorDistancia && predio.getAndares().get(andar).getTamanhoFila() > maiorFila)){
+				// Atualizo a menor distancia, guardo o numero do andar mais proximo e atualizo a maior fila
 				menorDistancia = distancia;
 				maisProximo = andar;
 				maiorFila = predio.getAndares().get(andar).getTamanhoFila();
@@ -114,15 +124,16 @@ public class Elevador extends Thread {
 		
 		printWriter.println("Elevador " + this.id + " escolheu atender ao andar " + maisProximo);
 		System.out.println("Elevador " + this.id + " escolheu atender ao andar " + maisProximo);
+		// Desloca-se até o andar mais proximo
 		this.andarAtual = maisProximo;
 		
-		// Remove as requisicoes da fila
+		// Remove as requisicoes da fila do andar mais proximo
 		atendimentosMaisProximos = predio.getAndares().get(maisProximo).forneceRequisicoes(capacidade);
 		
+		// Incrementa um sinal no semáforo
 		semaforo.release();
 		
-		//System.out.println(atendimentosPrimeira);
-		
+		// Retorna
 		return atendimentosMaisProximos;
 	}
 
@@ -132,11 +143,14 @@ public class Elevador extends Thread {
 		Collections.sort(atendimentos, new RequisicaoComparator());
 		int menorDistancia;
 		
+		// Guarda qual é a primeira e a ultima requisicao
 		Requisicao primeiro = atendimentos.get(0);
 		Requisicao ultimo = atendimentos.get(atendimentos.size()-1);
 		
+		// Calcula as distancias entre o andar atual e o primeiro e entre o andar atual e do ultimo 
 		int d1 = Math.abs(andarAtual - primeiro.getAndarDestino());
 		int d2 = Math.abs(andarAtual - ultimo.getAndarDestino());		
+		// Salva a menor distancia 
 		menorDistancia = Math.min(d1, d2);
 		
 		// Se for mais perto da ultima requisicao, comeca atendendo a ultima e reverte o restante da lista.
