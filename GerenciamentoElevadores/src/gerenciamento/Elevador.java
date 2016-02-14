@@ -1,7 +1,6 @@
 package gerenciamento;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -112,12 +111,18 @@ public class Elevador extends Thread {
 			return atendimentosMaisProximos;
 		}
 
-		for (Integer andar : andaresPendentes) {
-			int distancia = Math.abs(andar - this.andarAtual);
-			if (distancia < maisProximo
-					|| (distancia == maisProximo && predio.getAndares().get(andar).getTamanhoFila() > maiorFila)) {
-				maisProximo = andar;
-				maiorFila = predio.getAndares().get(andar).getTamanhoFila();
+		if(predio.getAndares().get(this.andarAtual).getFila().size() > 0){
+			maisProximo = this.andarAtual;
+		}else{
+			for (Integer andar : andaresPendentes) {
+				
+				
+				int distancia = Math.abs(andar - this.andarAtual);
+				if (distancia < maisProximo
+						|| (distancia == maisProximo && predio.getAndares().get(andar).getTamanhoFila() > maiorFila)) {
+					maisProximo = andar;
+					maiorFila = predio.getAndares().get(andar).getTamanhoFila();
+				}
 			}
 		}
 		printWriter.println("Elevador " + this.id + " escolheu atender ao andar " + maisProximo);

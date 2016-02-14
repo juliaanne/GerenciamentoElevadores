@@ -1,18 +1,9 @@
-Elevador 2 esta no andar 0 vai procurar a melhor opçao dentre os andares pendentes [0, 1, 2, 3, 4, 5]
-Elevador 2 escolheu atender ao andar 0
-Elevador 2 no andar 0 atendera para os seguintes destinos: [Destino: 3]
-Elevador 2 parou no andar 3 para deixar um passageiro.
-Elevador 2 terminou no andar 3
-Elevador 2 esta no andar 3 vai procurar a melhor opçao dentre os andares pendentes [3, 4, 5]
-Elevador 2 escolheu atender ao andar 5
-Elevador 2 no andar 5 atendera para os seguintes destinos: [Destino: 1, Destino: 0, Destino: 0]
+Elevador 2 esta no andar 2 vai procurar a melhor opçao dentre os andares pendentes [2, 3, 4, 5]
+Elevador 2 escolheu atender ao andar 2
+Elevador 2 no andar 2 atendera para os seguintes destinos: [Destino: 0, Destino: 1, Destino: 1, Destino: 4, Destino: 5]
+Elevador 2 parou no andar 0 para deixar um passageiro.
 Elevador 2 parou no andar 1 para deixar um passageiro.
-Elevador 2 parou no andar 0 para deixar um passageiro.
-Elevador 2 parou no andar 0 para deixar um passageiro.
-Elevador 2 terminou no andar 0
-Elevador 2 esta no andar 0 vai procurar a melhor opçao dentre os andares pendentes [3, 4]
-Elevador 2 escolheu atender ao andar 3
-Elevador 2 no andar 3 atendera para os seguintes destinos: [Destino: 5, Destino: 5]
-Elevador 2 parou no andar 5 para deixar um passageiro.
+Elevador 2 parou no andar 1 para deixar um passageiro.
+Elevador 2 parou no andar 4 para deixar um passageiro.
 Elevador 2 parou no andar 5 para deixar um passageiro.
 Elevador 2 terminou no andar 5
